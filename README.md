@@ -6,3 +6,5 @@
 * 运行上方代码后会得到一个名为**meizi_data.py**文件  
 * `python get_img.py`  
 * 开始下载。
+
+思路，放在[github-pages](https://wongjyusing.github.io/meizi_spider/)上
