@@ -1,0 +1,382 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>分析 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="section1.html">
+            
+                <a href="section1.html">
+            
+                    
+                    分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >分析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x5206;&#x6790;">&#x5206;&#x6790;</h2>
+<p>&#x6253;&#x5F00;<a href="http://www.mmjpg.com" target="_blank">&#x7F51;&#x9875;</a>&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;&#x7F51;&#x7AD9;&#x633A;&#x7B80;&#x5355;&#x7684;&#x3002;<br>&#x56FE;&#x7247;&#x94FE;&#x63A5;&#x5462;&#xFF0C;&#x53EA;&#x662F;&#x6309;&#x5E74;&#x4EFD;&#x548C;&#x56FE;&#x96C6;&#x7684;id&#x8FDB;&#x884C;&#x533A;&#x5206;&#x3002;<br>&#x53EA;&#x662F;<strong>2018</strong>&#x5E74;&#x7684;&#x7A0D;&#x5FAE;&#x6709;&#x70B9;&#x4E0D;&#x540C;&#xFF0C;&#x9700;&#x8981;&#x4E00;&#x4E2A;ajax&#x6765;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x94FE;&#x63A5;&#x7684;&#x540E;&#x7F00;&#x8FDB;&#x884C;&#x62FC;&#x63A5;&#x56FE;&#x96C6;&#x4E2D;&#x7684;&#x7FFB;&#x9875;&#x64CD;&#x4F5C;&#x3002;<br>&#x6240;&#x4EE5;&#x4E00;&#x5F00;&#x59CB;&#x53EA;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x56FE;&#x96C6;&#x7684;&#x540D;&#x5B57;&#x3001;&#x6240;&#x5C5E;&#x5E74;&#x4EFD;&#x548C;&#x5BF9;&#x5E94;&#x7684;id&#x3002;<br>&#x540E;&#x7EED;&#x53EA;&#x9700;&#x8981;&#x5B57;&#x7B26;&#x62FC;&#x63A5;&#x5373;&#x53EF;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x94FE;&#x63A5;&#x3002;<br>&#x6240;&#x4EE5;&#x4E00;&#x5F00;&#x59CB;&#x5F97;&#x51FA;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">import</span> re
+
+<span class="hljs-comment"># &#x6253;&#x5F00;&#x7F51;&#x9875;&#x51FD;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_response</span><span class="hljs-params">(url)</span>:</span>
+    headers = {
+        <span class="hljs-string">&apos;User-Agent&apos;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36&quot;</span>}
+    response = requests.get(url, headers) <span class="hljs-comment"># &#x52A0;&#x4E0A;&#x6D4F;&#x89C8;&#x5668;&#x5934;&#xFF0C;&#x4EE5;&#x9632;&#x88AB;&#x7981;</span>
+    response.encoding = <span class="hljs-string">&apos;utf-8&apos;</span>      <span class="hljs-comment"># &#x6307;&#x5B9A;&#x7F16;&#x7801;&#x683C;&#x5F0F;</span>
+    <span class="hljs-comment">#response.encoding = &apos;gbk&apos;      # &#x6307;&#x5B9A;&#x7F16;&#x7801;&#x683C;&#x5F0F;</span>
+    <span class="hljs-keyword">return</span> response
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">data_to_dict</span><span class="hljs-params">(response,data_dict)</span>:</span>
+    req = <span class="hljs-string">r&apos;&lt;ul&gt;(.*?)&lt;/ul&gt;&apos;</span>
+    re_str = re.findall(req,response,re.S)[<span class="hljs-number">0</span>].strip()
+    req = <span class="hljs-string">r&apos;&lt;li&gt;.*?&lt;img src=&quot;http://fm.shiyunjj.com/small/(.*?)/(.*?).jpg&quot;.*?alt=&quot;(.*?)&quot;.*?&lt;/li&gt;&apos;</span>
+    data_list = re.findall(req,re_str,re.S)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> data_list:
+        data_dict[i[<span class="hljs-number">1</span>]] = {<span class="hljs-string">&apos;meizi_year&apos;</span>:i[<span class="hljs-number">0</span>],<span class="hljs-string">&apos;meizi_titile&apos;</span>:i[<span class="hljs-number">2</span>]}
+    <span class="hljs-keyword">return</span> data_dict
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">writeFile</span><span class="hljs-params">(max_pages,content)</span>:</span>
+    <span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;meizi_data.py&apos;</span>,<span class="hljs-string">&apos;w&apos;</span>,encoding=<span class="hljs-string">&apos;utf-8&apos;</span>)<span class="hljs-keyword">as</span> txt_file:
+
+        txt_file.write(<span class="hljs-string">&apos;meizi_data = {\n&apos;</span>)
+        <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> content:
+
+            txt_file.write(<span class="hljs-string">&quot;&apos;&quot;</span>+ str(line) + <span class="hljs-string">&quot;&apos;:{&apos;meizi_year&apos;:&apos;&quot;</span> + content[line][<span class="hljs-string">&apos;meizi_year&apos;</span>] + <span class="hljs-string">&quot;&apos;, &apos;meizi_titile&apos;: &apos;&quot;</span> + content[line][<span class="hljs-string">&apos;meizi_titile&apos;</span>] + <span class="hljs-string">&quot;&apos;},\n&quot;</span>)
+        txt_file.write(<span class="hljs-string">&apos;\n}&apos;</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    data_dict = {}
+    url = <span class="hljs-string">&apos;http://www.mmjpg.com&apos;</span>
+    response = get_response(url).text
+    req = <span class="hljs-string">r&apos;&lt;em class=&quot;info&quot;&gt;&#x5171;(.*?)&#x9875;&lt;/em&gt;&apos;</span>
+    max_pages = int(re.findall(req,response)[<span class="hljs-number">0</span>])+<span class="hljs-number">1</span>
+    data_dict = data_to_dict(response,data_dict)
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>,max_pages):
+        url_page = f<span class="hljs-string">&apos;http://www.mmjpg.com/home/{i}&apos;</span>
+        response = get_response(url_page).text
+        data_d = data_to_dict(response,data_dict)
+    writeFile(max_pages,data_d)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    main()
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x8003;&#x8651;&#x5230;&#x5927;&#x591A;&#x6570;&#x4EBA;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x53EA;&#x80FD;&#x7528;<strong>&#x6700;&#x65E0;&#x8111;&#x7684;&#x65B9;&#x5F0F;</strong>&#x6765;&#x751F;&#x6210;&#x6570;&#x636E;&#x8868;&#x3002;<br>&#x6B63;&#x5E38;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4E00;&#x822C;&#x4F1A;&#x7528;mongoDB&#x6216;&#x8005;postgreSQL&#x6765;&#x5B8C;&#x6210;&#x8FD9;&#x90E8;&#x5206;&#x5DE5;&#x4F5C;&#x3002;  </p>
+<h2 id="&#x83B7;&#x53D6;&#x56FE;&#x7247;">&#x83B7;&#x53D6;&#x56FE;&#x7247;</h2>
+<p>&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x7684;&#x8BDD;&#x5462;&#xFF1F;
+&#x5C31;&#x7B80;&#x7B80;&#x5355;&#x5355;&#x7684;&#x62FC;&#x63A5;&#x5B57;&#x7B26;&#x94FE;&#x63A5;&#x5C31;&#x597D;&#x4E86;&#x3002;<br>&#x4F46;&#x7531;&#x4E8E;&#x8FD9;&#x4E2A;&#x7F51;&#x7AD9;&#x5728;2018&#x5E74;&#x8FDB;&#x884C;&#x4E86;&#x5347;&#x7EA7;&#xFF0C;2017&#x5E74;&#x540E;&#x7684;&#x56FE;&#x7247;&#x90FD;&#x662F;&#x8981;&#x4E00;&#x4E2A;ajax&#x6765;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#x94FE;&#x63A5;&#x3002;<br>&#x6545;&#x6B64;&#x5206;&#x5F00;&#x5904;&#x7406;&#x3002;<br>&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> meizi_data
+<span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">import</span> os
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_response</span><span class="hljs-params">(url,url_referer)</span>:</span>
+    headers = {
+        <span class="hljs-string">&apos;User-Agent&apos;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36&quot;</span>,
+        <span class="hljs-string">&apos;Referer&apos;</span>:url_referer,
+        }
+    response = requests.get(url=url, headers=headers) <span class="hljs-comment"># &#x52A0;&#x4E0A;&#x6D4F;&#x89C8;&#x5668;&#x5934;&#xFF0C;&#x4EE5;&#x9632;&#x88AB;&#x7981;</span>
+    <span class="hljs-keyword">return</span> response
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_php_data</span><span class="hljs-params">(mm_id,img_title,img_year)</span>:</span>
+    headers = {
+    <span class="hljs-string">&apos;Accept&apos;</span>:<span class="hljs-string">&apos;*/*&apos;</span>,
+    <span class="hljs-string">&apos;Accept-Encoding&apos;</span>: <span class="hljs-string">&apos;gzip, deflate&apos;</span>,
+    <span class="hljs-string">&apos;Accept-Language&apos;</span>: <span class="hljs-string">&apos;zh-CN,zh;q=0.9&apos;</span>,
+    <span class="hljs-string">&apos;Cache-Control&apos;</span>: <span class="hljs-string">&apos;no-cache&apos;</span>,
+    <span class="hljs-string">&apos;Connection&apos;</span>: <span class="hljs-string">&apos;keep-alive&apos;</span>,
+    <span class="hljs-string">&apos;Host&apos;</span>:<span class="hljs-string">&apos;www.mmjpg.com&apos;</span>,
+    <span class="hljs-string">&apos;Pragma&apos;</span>: <span class="hljs-string">&apos;no-cache&apos;</span>,
+    <span class="hljs-string">&apos;Referer&apos;</span>: f<span class="hljs-string">&apos;http://www.mmjpg.com/mm/{mm_id}&apos;</span>,
+    <span class="hljs-string">&apos;User-Agent&apos;</span>: <span class="hljs-string">&apos;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36&apos;</span>
+    }
+    params = {
+        <span class="hljs-string">&apos;id&apos;</span>: mm_id,
+        <span class="hljs-string">&apos;page&apos;</span>: <span class="hljs-string">&apos;8999&apos;</span>
+    }
+    url = <span class="hljs-string">&apos;http://www.mmjpg.com/data.php?&apos;</span>
+    response = requests.get(url=url, headers=headers,params=params) <span class="hljs-comment"># &#x52A0;&#x4E0A;&#x6D4F;&#x89C8;&#x5668;&#x5934;&#xFF0C;&#x4EE5;&#x9632;&#x88AB;&#x7981;</span>
+    response.encoding = <span class="hljs-string">&apos;utf-8&apos;</span>      <span class="hljs-comment"># &#x6307;&#x5B9A;&#x7F16;&#x7801;&#x683C;&#x5F0F;</span>
+    list_data = response.text.split(<span class="hljs-string">&quot;,&quot;</span>)
+    c = <span class="hljs-number">1</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> list_data:
+        b = f<span class="hljs-string">&apos;http://fm.shiyunjj.com/{img_year}/{mm_id}/{c}i{i}.jpg&apos;</span>
+        url_referer = f<span class="hljs-string">&apos;http://www.mmjpg.com/mm/{mm_id}/&apos;</span>
+        response = get_response(b,url_referer)
+        path = f<span class="hljs-string">&apos;download_img/{img_year}/{img_title}/{c}.jpg&apos;</span>
+        f = open(path, <span class="hljs-string">&apos;wb&apos;</span>)
+        f.write(response.content)
+        f.close()
+        c+=<span class="hljs-number">1</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_img</span><span class="hljs-params">(img_year,mm_id,img_title)</span>:</span>
+
+    <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,<span class="hljs-number">100</span>):
+        b = f<span class="hljs-string">&apos;http://fm.shiyunjj.com/{img_year}/{mm_id}/{c}.jpg&apos;</span>
+
+        url_referer = f<span class="hljs-string">&apos;http://www.mmjpg.com/mm/{mm_id}/&apos;</span>
+        response = get_response(b,url_referer)
+        print(response.status_code)
+        print(c)
+        <span class="hljs-keyword">if</span> response.status_code != <span class="hljs-number">200</span>:
+            <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">else</span>:
+            path = f<span class="hljs-string">&apos;download_img/{img_year}/{img_title}/{c}.jpg&apos;</span>
+            f = open(path, <span class="hljs-string">&apos;wb&apos;</span>)
+            f.write(response.content)
+            f.close()
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    data_dict = meizi_data.meizi_data
+    <span class="hljs-keyword">try</span>:
+        os.mkdir(<span class="hljs-string">&apos;download_img&apos;</span>)
+    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+        print(<span class="hljs-string">&apos;&#x5DF2;&#x521B;&#x5EFA; download_img &#x76EE;&#x5F55;&apos;</span>)
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> data_dict:
+        img_year = data_dict[i][<span class="hljs-string">&apos;meizi_year&apos;</span>]
+        img_title = data_dict[i][<span class="hljs-string">&apos;meizi_titile&apos;</span>]
+
+        <span class="hljs-keyword">try</span>:
+            os.mkdir(f<span class="hljs-string">&apos;download_img/{img_year}&apos;</span>)
+        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+            print(<span class="hljs-string">&apos;&#x5DF2;&#x521B;&#x5EFA;&#x56FE;&#x7247;&#x5E74;&#x4EFD;&#x76EE;&#x5F55;&apos;</span>)
+        <span class="hljs-keyword">try</span>:
+            os.mkdir(f<span class="hljs-string">&apos;download_img/{img_year}/{img_title}/&apos;</span>)
+        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+            print(f<span class="hljs-string">&apos;&#x5DF2;&#x521B;&#x5EFA;{img_title}&#x76EE;&#x5F55;&apos;</span>)
+        print(f<span class="hljs-string">&apos;&#x6B63;&#x5728;&#x722C;&#x53D6;&#x300A;{img_title}&#x300B;id&#x4E3A;{i}&apos;</span>)
+        <span class="hljs-keyword">if</span> img_year != <span class="hljs-string">&apos;2018&apos;</span>:
+            img_link = get_img(img_year,i,img_title)
+        <span class="hljs-keyword">else</span>:
+            img_link = get_php_data(i,img_title,img_year)
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    main()
+</code></pre>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>&#x672C;&#x6B21;&#x7684;&#x722C;&#x866B;&#xFF0C;&#x53EA;&#x8981;&#x7A0D;&#x52A0;<strong>&#x5206;&#x6790;</strong>&#xFF0C;&#x9664;&#x4E86;2017&#x5E74;&#x540E;&#x7684;&#x56FE;&#x7247;&#x9700;&#x8981;&#x52A8;&#x6001;&#x5904;&#x7406;&#x7684;&#x64CD;&#x4F5C;&#x3002;<br>&#x5176;&#x4ED6;&#x5E74;&#x4EFD;&#x7684;&#x53EA;&#x9700;&#x8981;&#x5229;&#x7528;<strong>&#x649E;&#x5E93;</strong>&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5168;&#x7AD9;&#x722C;&#x53D6;&#x4E86;&#x3002;<br>&#x6CA1;&#x4EC0;&#x4E48;&#x6280;&#x672F;&#x542B;&#x91CF;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 简介">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"分析","level":"1.2","depth":1,"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/section1.md","mtime":"2018-11-20T16:49:38.568Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-20T17:22:14.326Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
